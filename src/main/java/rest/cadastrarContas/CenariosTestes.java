@@ -120,6 +120,18 @@ public class CenariosTestes extends BaseTest { // Classe Cenários foi extendida
 		;
 
 	}
+	
+	
+	@Test
+	public void naoDevoRemoverCobtaComMovimentaca() { // Cenário para incluir uma movimentação
+		given().header("Authorization", "JWT " + Login.login()) // Envia o token que f0i extraído
+				.when().delete("/contas/2381880") // Rota para fazer o post
+				.then().statusCode(400) // Verifica que a resposta da requisição , conta criada com sucesso 201 Created
+				.body("msg", hasItem("Data da Movimentação deve ser menor ou igual à data atual")) // Verifica a mensagem de erro
+
+		;
+
+	}
 
 	// Método para gerar um amovimentação válida
 	private Movimentacao movimetacaoValida() {

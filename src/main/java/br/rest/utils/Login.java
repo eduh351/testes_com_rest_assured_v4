@@ -1,4 +1,4 @@
-package rest.core;
+package br.rest.utils;
 
 import static io.restassured.RestAssured.given;
 

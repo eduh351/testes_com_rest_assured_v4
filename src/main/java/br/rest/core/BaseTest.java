@@ -1,4 +1,4 @@
-package rest.core;
+package br.rest.core;
 
 import org.hamcrest.Matchers;
 import org.junit.BeforeClass;

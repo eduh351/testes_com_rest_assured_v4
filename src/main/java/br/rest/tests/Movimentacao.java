@@ -1,4 +1,4 @@
-package rest.cadastrarContas;
+package br.rest.tests;
 
 public class Movimentacao {
 	private Integer conta_id;
